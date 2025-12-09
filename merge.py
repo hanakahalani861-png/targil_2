@@ -5,16 +5,10 @@ def merge(a, b, key=lambda x: x):
     m = len(b)
     s = []
     while (i<n or j<m):
-        if (i==n or (j<m and a[i]>b[j])):
+        if (i==n or (j<m and key(a[i])>key(b[j]))):
             s.append(b[j])
             j += 1
         else:
             s.append(a[i])
             i += 1
     return s
-
-a = [2,4,6]
-b = [1,3,5]
-s = merge(a, b)
-for i in s:
-    print(i)
