@@ -22,8 +22,3 @@ def merge_sorted_lists(lists, key=lambda x: x):
         now[k] += 1
         j += 1
     return s
-
-lists = [[1,2],[3,4],[1,4]]
-a = merge_sorted_lists(lists, lambda x: 1-x%2)
-for i in a:
-    print(i)
