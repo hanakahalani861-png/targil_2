@@ -4,9 +4,9 @@ def hoare_partition(a, key=lambda x: x):
     j = n-1
     pivot = 0
     while i<j:
-        while i<n and a[i]<a[pivot]:
+        while i<n and key(a[i])<key(a[pivot]):
             i += 1
-        while j>-1 and a[j]>=a[pivot]:
+        while j>-1 and key(a[j])>=key(a[pivot]):
             j -= 1
         if i<j:
             a[i], a[j] = a[j], a[i]
